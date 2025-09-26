@@ -41,3 +41,6 @@ if user_prompt:
     )
     assistant_response = response.content
     st.session_state.chat_history.append({"role": "assistant", "content": assistant_response})
+
+    with st.chat_message("assistant"):
+        st.markdown(assistant_response)
